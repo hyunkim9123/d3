@@ -669,7 +669,7 @@
     }
     function attrFunction() {
       var x = value.apply(this, arguments);
-      if (x == null) this.removeAttribute(name); else this.setAttribute(name, x);
+      if (x == null || isNaN(x)) this.removeAttribute(name); else this.setAttribute(name, x);
     }
     function attrFunctionNS() {
       var x = value.apply(this, arguments);
